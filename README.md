@@ -4,8 +4,7 @@
 
 ***
 
->**Note**
->Usage:
+>**Usage:**
 
 ***
 
@@ -14,8 +13,7 @@
 
 ***
 
->**Note**
->Example:
+>**Example:**
 
 ***
 
