@@ -11,15 +11,18 @@
 
 #include <string>
 #include <vector>
+#include <map>
 
 class SearchEngine {
 private:
-    std::string searchString;
+    const std::string searchString;
     std::vector<std::string> results;
+    std::map<std::string, std::vector<int>> lineNumberResults;
     
 public:
     SearchEngine(std::string searchString);
     std::vector<std::string> getResults();
+    std::map<std::string, std::vector<int>> getLineNumberResults();
     void searchInFile(std::string filePath);
     void searchInFolder(std::string folderPath);
 };

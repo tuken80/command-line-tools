@@ -6,16 +6,12 @@
 
 >**Usage:**
 
-***
-
 
     ssi <string> <file|folder> [<file|folder>] [<file|folder>] ...
 
 ***
 
 >**Example:**
-
-***
 
 
     ssi "#include <iostream>" /Users/user /Developer/projects/project/main.cpp

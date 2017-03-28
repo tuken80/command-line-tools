@@ -10,6 +10,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
 #include <boost/filesystem.hpp>
 #include "SearchEngine.hpp"
 
@@ -17,6 +18,7 @@ using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
+using std::map;
 using boost::filesystem::is_directory;
 using boost::filesystem::is_regular_file;
 using boost::filesystem::exists;
@@ -45,7 +47,6 @@ int main(int argc, const char * argv[]) {
         return 1;
     }
     
-    vector<string> results;
     const string strToFind(argv[1]);
     SearchEngine se(strToFind);
     
@@ -65,10 +66,19 @@ int main(int argc, const char * argv[]) {
         }
     }
     
-    results = se.getResults();
+    vector<string> results(se.getResults());
+    map<string, vector<int>> lineNumberResults(se.getLineNumberResults());
     
-    for (string & str : results) {
-        cout << "'" << strToFind << "' find in: " << str << "." << endl;
+    for (string & result : results) {
+        cout << "Find in: " << result << "." << " Line(s): ";
+        
+        for (int & line : lineNumberResults[result]) {
+            if (&line - &lineNumberResults[result][0] != 0)
+                cout << ", ";
+            cout << line;
+        }
+        
+        cout << "." << endl;
     }
     
     return 0;
