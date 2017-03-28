@@ -28,6 +28,7 @@
 		493A7A651E89AC9D00977863 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		493A7A6C1E89ACE000977863 /* SearchEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SearchEngine.cpp; sourceTree = "<group>"; };
 		493A7A6D1E89ACE000977863 /* SearchEngine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SearchEngine.hpp; sourceTree = "<group>"; };
+		49BC11E01E8A9B41002F689A /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 		493A7A591E89AC9D00977863 = {
 			isa = PBXGroup;
 			children = (
+				49BC11E01E8A9B41002F689A /* README */,
 				493A7A641E89AC9D00977863 /* SearchStringIn */,
 				493A7A631E89AC9D00977863 /* Products */,
 			);
@@ -231,7 +233,7 @@
 					"-lboost_filesystem",
 					"-lboost_system",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ssi;
 			};
 			name = Debug;
 		};
@@ -247,7 +249,7 @@
 					"-lboost_filesystem",
 					"-lboost_system",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ssi;
 			};
 			name = Release;
 		};

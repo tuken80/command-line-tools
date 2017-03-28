@@ -35,7 +35,7 @@ int main(int argc, const char * argv[]) {
     }
     
     if (help) {
-        cout << "This tool allows searching string occurences in file or folder's files." << endl << "Usage: " << argv[0] << " <string> <file|folder> [<file|folder>] [<file|folder>] ..." << endl << "Example: " << argv[0] << " \"#include <iostream>\" /home/user/projects/projet/main.cpp /home/user/projects/projet" << endl;
+        cout << "This tool allows searching string occurences in file or folder's files." << endl << "Usage: " << argv[0] << " <string> <file|folder> [<file|folder>] [<file|folder>] ..." << endl << "Example: " << argv[0] << " \"#include <iostream>\" /home/user/projects/project/main.cpp /home/user/projects/projet" << endl;
         
         return 0;
     }
