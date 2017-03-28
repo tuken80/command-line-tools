@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		493A7A661E89AC9D00977863 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493A7A651E89AC9D00977863 /* main.cpp */; };
+		493A7A6E1E89ACE000977863 /* SearchEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 493A7A6C1E89ACE000977863 /* SearchEngine.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		493A7A621E89AC9D00977863 /* SearchStringIn */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SearchStringIn; sourceTree = BUILT_PRODUCTS_DIR; };
 		493A7A651E89AC9D00977863 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		493A7A6C1E89ACE000977863 /* SearchEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SearchEngine.cpp; sourceTree = "<group>"; };
+		493A7A6D1E89ACE000977863 /* SearchEngine.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SearchEngine.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				493A7A651E89AC9D00977863 /* main.cpp */,
+				493A7A6C1E89ACE000977863 /* SearchEngine.cpp */,
+				493A7A6D1E89ACE000977863 /* SearchEngine.hpp */,
 			);
 			path = SearchStringIn;
 			sourceTree = "<group>";
@@ -100,7 +105,7 @@
 			};
 			buildConfigurationList = 493A7A5D1E89AC9D00977863 /* Build configuration list for PBXProject "SearchStringIn" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = French;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -121,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				493A7A661E89AC9D00977863 /* main.cpp in Sources */,
+				493A7A6E1E89ACE000977863 /* SearchEngine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +223,14 @@
 		493A7A6A1E89AC9D00977863 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				DEVELOPMENT_TEAM = 5VQRZRPCMT;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.63.0/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.63.0/lib;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lboost_filesystem",
+					"-lboost_system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -225,7 +238,15 @@
 		493A7A6B1E89AC9D00977863 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				DEVELOPMENT_TEAM = 5VQRZRPCMT;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.63.0/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.63.0/lib;
+				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lboost_filesystem",
+					"-lboost_system",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -249,6 +270,7 @@
 				493A7A6B1E89AC9D00977863 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
